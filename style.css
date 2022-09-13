@@ -1,0 +1,68 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  background-color: darkcyan;
+  margin: 2rem auto;
+  width: 30rem;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  padding: 2rem;
+}
+h1 {
+  color: rgb(3, 59, 59);
+}
+.input {
+  width: 50%;
+  padding: 0.5rem;
+  border: none;
+  /* background-color: rgb(177, 228, 228); */
+  background-color: rgb(19, 212, 212);
+  border-radius: 0.5rem;
+}
+h1 i {
+  color: aqua;
+}
+input::placeholder {
+  color: aliceblue;
+  border: none;
+}
+
+.btn {
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: rgb(8, 41, 41);
+  color: wheat;
+}
+.todo {
+  background-image: url(https://thumbs.dreamstime.com/b/cyan-wall-texture-background-cyan-wall-texture-background-used-materials-game-engine-interior-design-138784969.jpg);
+  margin-top: 2rem;
+  font-family: "Electrolize", sans-serif;
+}
+.altdiv {
+  padding: 0.4rem;
+  display: flex;
+  justify-content: space-between;
+}
+.remove1 {
+  border: none;
+  border-radius: 0.5rem;
+  background-color: rgb(55, 165, 150);
+  padding: 0.3rem;
+  letter-spacing: 0.2rem;
+}
+
+.altdiv p {
+  max-width: 340px;
+  margin-left: 0.5rem;
+  font-weight: 900;
+  border-bottom: #578379 dashed 2px;
+  word-wrap: break-word;
+}
+
+.chacked {
+  text-decoration: line-through;
+}
