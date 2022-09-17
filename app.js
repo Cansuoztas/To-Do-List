@@ -2,44 +2,28 @@ const input = document.querySelector("#input");
 const btn = document.querySelector("#btn");
 const todo = document.querySelector("#todo");
 const remove = `<button>Remove</button>`;
-const altdiv = document.getElementById("altdiv");
+const altdiv = document.querySelector(".altdiv");
+const icon = document.getElementById("icon");
 
 let day = new Date().getDate();
 let month = new Date().getMonth() + 1;
 let year = new Date().getFullYear();
 
-//? *********onload******
-
-// window.addEventListener("load", () => {
-//   //baslangıç
-//   const todos = localStorage.getItem("todos");
-//   if (!todos) {
-//     localStorage.setItem("todos", JSON.stringify([]));
-//     console.log(todos);
-//   } else {
-//     let datalist = JSON.parse(localStorage.getItem("todos")); // dataliste eğer json parse içi doluysa yani true ise aktar ama yoksa [] yi aktar demek || oluyor.
-
-//     datalist.forEach((e) => {
-//       //? her bir todo objesini destructor yaptık
-//       const { id, text, date } = e;
-//       let element = document.createElement("div");
-//       element.classList.add("altdiv");
-//       element.innerHTML = `<input class="box" type = "checkbox"   />
-//     <p>${text}</p><div class="date">${date}<button class = "rmvBtn"> REMOVE</button></div>`;
-//       list.appendChild(element);
-//     });
-//   }
-// })
+let lists = localStorage.getItem("lists");
+localStorage.setItem("lists", JSON.stringify(todo));
 
 btn.addEventListener("click", () => {
   if (!input.value) {
-    alert("birşey gir");
+    alert("Birşey Giriniz");
   } else {
-    todo.innerHTML += `<div class="altdiv" id="altdiv"><input class=box type="checkbox"><p>${input.value}</p><div class="günler">${day}.${month}.${year}  <button class= "remove1">remove</button></div></div>`;
+    todo.innerHTML += `<div class="altdiv" id="altdiv">
+    <i  id="icon" class="fa-regular fa-square-full checked icon"></i>
+    <p class="par">${input.value}</p>
+    <div class="günler">${day}.${month}.${year}  
+    <button class="remove" style=" font-weight: 600;">REMOVE</button></div></div>`;
   }
   input.value = "";
 });
-//***********enter */
 
 input.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
@@ -47,41 +31,13 @@ input.addEventListener("keydown", (e) => {
   }
 });
 
-// // *************remove*****
-
 todo.addEventListener("click", (e) => {
-  if (e.target.classList.contains("remove1")) {
+  if (
+    e.target.classList.contains("remove") &&
+    e.target.parentElement.parentElement.classList.contains("checked")
+  ) {
     e.target.parentElement.parentElement.remove();
+  } else {
+    alert("Görevi Tamamlamadan Silemezsiniz");
   }
 });
-
-//******line through */
-// todo.addEventListener("click", (e) => {
-//   if (e.target.classList.contains("box")) {
-//     e.target.nextElementSibling.style.textDecoration = "line-through";
-//   }
-// });
-
-// todo.addEventListener("click",(e)=>{
-//     let sayac = 0
-//     for(let i=0 ; i<1000 ; i++)
-//     if(e.target.classList.contains("box")){
-//         sayac +=1;
-//     if(sayac)
-//     }
-// })
-
-/* REMOVE, CHECK */
-for (i = 0; i < 100; i++) {
-  let sayac = 1;
-  todo.addEventListener("click", (e) => {
-    if (e.target.classList.contains("box")) {
-      if (sayac % 2 == 1) {
-        e.target.nextElementSibling.style.textDecoration = "line-through";
-      } else if (sayac % 2 == 0) {
-        e.target.nextElementSibling.style.textDecoration = "none";
-      }
-      sayac += 1;
-    }
-  });
-}

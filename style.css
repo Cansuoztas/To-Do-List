@@ -1,68 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Ms+Madi&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
+body {
+  background-image: url(./img/body.jpg);
+  background-color: rgb(34, 34, 41);
+  height: 100vh;
+}
 .container {
-  background-color: darkcyan;
+  background-image: url(./img/h1.jpg);
+
   margin: 2rem auto;
-  width: 30rem;
+  width: 40rem;
   text-align: center;
   font-family: "Poppins", sans-serif;
-  padding: 2rem;
+  padding: 2rem 3rem;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.down {
+  background-color: white;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  width: 40rem;
+
+  text-align: center;
+  margin: 0 auto;
 }
 h1 {
-  color: rgb(3, 59, 59);
+  color: rgb(255, 255, 255);
+  text-shadow: 3px 3px 3px rgb(0, 0, 0);
+  font-size: 4rem;
 }
 .input {
-  width: 50%;
-  padding: 0.5rem;
+  width: 70%;
+  padding: 1rem;
   border: none;
-  /* background-color: rgb(177, 228, 228); */
-  background-color: rgb(19, 212, 212);
+  background-color: rgb(255, 255, 255);
   border-radius: 0.5rem;
 }
-h1 i {
-  color: aqua;
-}
+
 input::placeholder {
-  color: aliceblue;
+  color: rgb(0, 0, 0);
   border: none;
 }
 
 .btn {
+  margin-left: 1rem;
   border: none;
   border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
-  background-color: rgb(8, 41, 41);
-  color: wheat;
+  padding: 1rem 2.5rem;
+  background-color: rgb(255, 254, 253);
+  color: rgb(2, 2, 2);
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  font-size: medium;
+  font-weight: 700;
 }
 .todo {
-  background-image: url(https://thumbs.dreamstime.com/b/cyan-wall-texture-background-cyan-wall-texture-background-used-materials-game-engine-interior-design-138784969.jpg);
+  border-radius: 10px;
+  background-image: url(./img/h1.jpg);
+
   margin-top: 2rem;
-  font-family: "Electrolize", sans-serif;
+  font-family: "Neucha", cursive;
 }
 .altdiv {
-  padding: 0.4rem;
+  color: rgb(0, 0, 0);
+  padding: 0.7rem;
   display: flex;
   justify-content: space-between;
+  font-family: "Dosis", sans-serif;
+  align-items: center;
 }
-.remove1 {
-  border: none;
-  border-radius: 0.5rem;
-  background-color: rgb(55, 165, 150);
-  padding: 0.3rem;
-  letter-spacing: 0.2rem;
-}
-
 .altdiv p {
-  max-width: 340px;
-  margin-left: 0.5rem;
-  font-weight: 900;
-  border-bottom: #578379 dashed 2px;
+  max-width: 15rem;
   word-wrap: break-word;
+  font-size: 1.3rem;
+  font-weight: 600;
 }
 
-.chacked {
-  text-decoration: line-through;
+.remove {
+  margin-left: 1rem;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 10px;
+  padding: 0.4rem;
+  color: rgb(0, 0, 0);
+}
+
+.checked > p {
+  text-decoration: line-through rgb(0, 0, 0);
+}
+
+.fa-check {
+  color: rgb(0, 0, 0);
 }
