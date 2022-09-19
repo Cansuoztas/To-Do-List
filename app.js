@@ -10,7 +10,6 @@ let day = new Date().getDate();
 let month = new Date().getMonth() + 1;
 let year = new Date().getFullYear();
 
-<<<<<<< HEAD
 window.onload = function () {
   input.focus();
 };
@@ -33,7 +32,7 @@ window.addEventListener("load", () => {
 //     size.innerHTML = window.innerWidth
 //     console.log(window.innerWidth)
 // })
-=======
+
 let lists = localStorage.getItem("lists");
 localStorage.setItem("lists", JSON.stringify(todo));
 >>>>>>> d9de73ee7398cb94cb5ea6117e2a4a9244cc1f3b
@@ -54,7 +53,7 @@ const adding = () => {
     todo.innerHTML += `<div class="altdiv" id="altdiv">
     <i  id="icon" class="fa-regular fa-square-full checked icon"></i>
     <p class="par">${input.value}</p>
-<<<<<<< HEAD
+
     <div class="günler">
     ${day}.${month}.${year}  
     <button class="remove">remove</button></div>
@@ -75,7 +74,7 @@ const adding = () => {
 };
 
 btn.addEventListener("click", adding);
-=======
+
     <div class="günler">${day}.${month}.${year}  
     <button class="remove" style=" font-weight: 600;">REMOVE</button></div></div>`;
   }
@@ -128,9 +127,9 @@ todo.addEventListener("click", (e) => {
     }
   }
 });
-=======
+
   } else {
     alert("Görevi Tamamlamadan Silemezsiniz");
   }
 });
->>>>>>> d9de73ee7398cb94cb5ea6117e2a4a9244cc1f3b
+
