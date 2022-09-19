@@ -35,7 +35,7 @@ window.addEventListener("load", () => {
 
 let lists = localStorage.getItem("lists");
 localStorage.setItem("lists", JSON.stringify(todo));
->>>>>>> d9de73ee7398cb94cb5ea6117e2a4a9244cc1f3b
+
 
 const starter = (element) => {
   // console.log(element)
@@ -80,7 +80,7 @@ btn.addEventListener("click", adding);
   }
   input.value = "";
 });
->>>>>>> d9de73ee7398cb94cb5ea6117e2a4a9244cc1f3b
+
 
 input.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
@@ -94,7 +94,7 @@ todo.addEventListener("click", (e) => {
     e.target.parentElement.parentElement.classList.contains("checked")
   ) {
     e.target.parentElement.parentElement.remove();
-<<<<<<< HEAD
+
 
     // console.log(e.target.parentElement.parentElement.lastChild.previousElementSibling.innerHTML);
 
