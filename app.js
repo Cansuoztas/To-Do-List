@@ -10,6 +10,7 @@ let day = new Date().getDate();
 let month = new Date().getMonth() + 1;
 let year = new Date().getFullYear();
 
+<<<<<<< HEAD
 window.onload = function () {
   input.focus();
 };
@@ -32,6 +33,10 @@ window.addEventListener("load", () => {
 //     size.innerHTML = window.innerWidth
 //     console.log(window.innerWidth)
 // })
+=======
+let lists = localStorage.getItem("lists");
+localStorage.setItem("lists", JSON.stringify(todo));
+>>>>>>> d9de73ee7398cb94cb5ea6117e2a4a9244cc1f3b
 
 const starter = (element) => {
   // console.log(element)
@@ -44,11 +49,12 @@ const starter = (element) => {
 
 const adding = () => {
   if (!input.value) {
-    alert("birşey gir");
+    alert("Birşey Giriniz");
   } else {
     todo.innerHTML += `<div class="altdiv" id="altdiv">
     <i  id="icon" class="fa-regular fa-square-full checked icon"></i>
     <p class="par">${input.value}</p>
+<<<<<<< HEAD
     <div class="günler">
     ${day}.${month}.${year}  
     <button class="remove">remove</button></div>
@@ -69,6 +75,13 @@ const adding = () => {
 };
 
 btn.addEventListener("click", adding);
+=======
+    <div class="günler">${day}.${month}.${year}  
+    <button class="remove" style=" font-weight: 600;">REMOVE</button></div></div>`;
+  }
+  input.value = "";
+});
+>>>>>>> d9de73ee7398cb94cb5ea6117e2a4a9244cc1f3b
 
 input.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
@@ -82,6 +95,7 @@ todo.addEventListener("click", (e) => {
     e.target.parentElement.parentElement.classList.contains("checked")
   ) {
     e.target.parentElement.parentElement.remove();
+<<<<<<< HEAD
 
     // console.log(e.target.parentElement.parentElement.lastChild.previousElementSibling.innerHTML);
 
@@ -114,3 +128,9 @@ todo.addEventListener("click", (e) => {
     }
   }
 });
+=======
+  } else {
+    alert("Görevi Tamamlamadan Silemezsiniz");
+  }
+});
+>>>>>>> d9de73ee7398cb94cb5ea6117e2a4a9244cc1f3b
